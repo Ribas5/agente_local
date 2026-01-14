@@ -1,0 +1,21 @@
+# 4. Compose Best Practices
+
+* Name composables clearly (e.g., `LoginScreen`, `SaveButton`)
+* Separate reusable UI parts into isolated functions
+* Avoid putting complex logic inside composables
+* Use `LazyColumn` instead of `Column` for long lists
+* Prefer `rememberSaveable` for persistent states
+* Use `MaterialTheme` for consistent colors, shapes, and typography
+* Use `Preview` to validate visual behavior:
+
+```kotlin
+@Preview
+@Composable
+fun PreviewLogin() {
+    LoginScreen()
+}
+```
+
+* Use `Scaffold` with `TopAppBar` or `BottomAppBar` for structure
+* Organize the code modularly: screens, components, theme, navigation
+

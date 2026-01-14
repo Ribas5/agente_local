@@ -1,0 +1,19 @@
+# 5. Avoid Redundancy in contentDescription
+
+**Important:**
+
+> Screen readers like TalkBack and VoiceOver already announce the component type (such as “button” or “text field”). Therefore:
+
+✅ Correct:
+
+```kotlin
+contentDescription = "Confirm submission"
+```
+
+❌ Incorrect:
+
+```kotlin
+contentDescription = "Button confirm submission"
+```
+
+This prevents the reader from saying “button button confirm submission”.

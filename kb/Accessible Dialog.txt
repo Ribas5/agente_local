@@ -1,0 +1,23 @@
+# 9. Accessible Dialog
+
+```kotlin
+AlertDialog(
+    onDismissRequest = onCancel,
+    title = { Text("Delete item", modifier = Modifier.semantics { heading() }) },
+    text = { Text("Are you sure you want to delete?") },
+    confirmButton = {
+        TextButton(onClick = onConfirm, modifier = Modifier.semantics {
+            contentDescription = "Confirm deletion"
+        }) {
+            Text("Confirm")
+        }
+    },
+    dismissButton = {
+        TextButton(onClick = onCancel, modifier = Modifier.semantics {
+            contentDescription = "Cancel"
+        }) {
+            Text("Cancel")
+        }
+    }
+)
+```

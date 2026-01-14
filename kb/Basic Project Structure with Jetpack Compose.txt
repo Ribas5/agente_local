@@ -1,0 +1,21 @@
+# 1. Basic Project Structure with Jetpack Compose
+
+```kotlin
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            MyApp()
+        }
+    }
+}
+
+@Composable
+fun MyApp() {
+    MaterialTheme {
+        MainScreen()
+    }
+}
+```
+
+Organize the code into separate files by screen and reusable component.

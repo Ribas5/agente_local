@@ -1,0 +1,18 @@
+# 8. Scaffold with Snackbar and Focus
+
+```kotlin
+val snackbarHostState = remember { SnackbarHostState() }
+val scope = rememberCoroutineScope()
+
+Scaffold(snackbarHost = { SnackbarHost(snackbarHostState) }) {
+    Button(onClick = {
+        scope.launch {
+            snackbarHostState.showSnackbar("Item saved successfully")
+        }
+    }) {
+        Text("Save")
+    }
+}
+```
+
+Use `SnackbarHost` and `SnackbarHostState` for immediate visual feedback.

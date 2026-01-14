@@ -1,0 +1,20 @@
+# 10. WCAG 2.2 - Rules Applied to Mobile
+
+Principles:
+
+* Perceivable
+* Operable
+* Understandable
+* Robust
+
+Useful criteria:
+
+* Minimum target: 48x48dp
+* Visible focus
+* User feedback
+
+Example:
+
+```kotlin
+Modifier.border(2.dp, Color.Blue) // visual focus
+```

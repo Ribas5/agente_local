@@ -1,0 +1,17 @@
+# 11. W3C Mobile Accessibility
+
+Apply WCAG to contexts such as:
+
+* Small screens
+* Touch and voice input
+* Environments with variable light/noise
+
+Recommendations:
+
+* Responsive layout
+* Zoom up to 200%
+* Tactile/visual feedback
+
+```kotlin
+Modifier.sizeIn(minWidth = 48.dp)
+```

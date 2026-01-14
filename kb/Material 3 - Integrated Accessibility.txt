@@ -1,0 +1,11 @@
+# 12. Material 3 - Integrated Accessibility
+
+* Use components from the `androidx.compose.material3.*` package
+* Use `MaterialTheme.colorScheme` to adapt to dynamic colors
+* Use `MaterialTheme.typography.titleLarge`, etc.
+
+Example:
+
+```kotlin
+Text("Title", style = MaterialTheme.typography.titleLarge)
+```
