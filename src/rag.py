@@ -89,17 +89,23 @@ def retrieve(query: str, top_k: int = 5):
     qnorm = np.linalg.norm(q)
     if qnorm == 0:
         qnorm = 1.0
+    
     sims = (V @ q) / (Vnorms.squeeze() * qnorm)
     idx = np.argsort(sims)[-top_k:][::-1]
 
     results = []
     for i in idx.tolist():
+        # --- O FILTRO FICA AQUI ---
+        score = float(sims[i])
+        if score < 0.35:  # Define um limite mínimo de relevância
+            continue
+            
         results.append(
             {
                 "text": str(texts[i]),
                 "source": str(sources[i]),
                 "chunk": int(chunks[i]),
-                "score": float(sims[i]),
+                "score": score,
             }
         )
     return results

@@ -8,7 +8,7 @@ from src.rag import retrieve, build_index, INDEX_PATH
 from few_shot import exemplos
 
 # Model Configuration
-CHAT_MODEL = "codellama:7b"
+CHAT_MODEL = "llama3.1:8b"
 
 # Output Configuration
 BASE_DIR = Path(__file__).resolve().parent
