@@ -29,7 +29,8 @@ O script depende do Ollama rodando em segundo plano.
 Abra seu terminal e execute os comandos abaixo para baixar o cérebro da IA e o modelo de leitura de arquivos:
 
 ```bash
-ollama pull codellama:7b
+ollama pull codellama:8b
+ollama pull ministral-3:14b
 ollama pull nomic-embed-text
 
 ```
